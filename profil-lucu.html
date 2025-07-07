@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil Gada</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+    body {
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #000000, #fefdff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .card {
+      background: #f9f4f7;
+      border: 3px dashed #bbaacc;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 600px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      color: #7a5c99;
+      margin-bottom: 20px;
+      font-size: 32px;
+    }
+
+    table {
+      width: 100%;
+      margin: 10px 0 20px 0;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 10px;
+      vertical-align: top;
+      font-size: 18px;
+      color: #444;
+    }
+
+    td.label {
+      font-weight: bold;
+      color: #6b4c80;
+      width: 130px;
+      white-space: nowrap;
+    }
+
+    .emoji {
+      font-size: 22px;
+      margin-right: 5px;
+    }
+
+    audio {
+      display: none; /* menyembunyikan kontrol audio */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Musik (diputar setelah user klik halaman) -->
+  <audio id="musik" loop>
+    <source src="about you.mp3" type="audio/mpeg">
+    Browser kamu tidak mendukung audio.
+  </audio>
+
+  <div class="card">
+    <h1>------ Profil ku jir ------</h1>
+    <table>
+      <tr>
+        <td class="label"><span class="emoji">👤</span>Nama ku:</td>
+        <td>I Ketut Gada Pande Prasista</td>
+      </tr>
+      <tr>
+        <td class="label"><span class="emoji">🏡</span>Alamat ku:</td>
+        <td>Jl. Tunjung Tutur No.19x, Denpasar Utara</td>
+      </tr>
+      <tr>
+        <td class="label"><span class="emoji">🎂</span>Lahir ku:</td>
+        <td>Denpasar, 05 Juli 2005</td>
+      </tr>
+      <tr>
+        <td class="label"><span class="emoji">💖</span>Suka:</td>
+        <td>
+          Kamu, Kamu, Kamu, Kamu, mie ayam, aku suka yang manis-manis seperti mu, <br>
+          aku suka semua hal tentang Kamu. Suka tidur, suka rakit lego, suka warna hitam putih
+        </td>
+      </tr>
+      <tr>
+        <td class="label"><span class="emoji">😖</span>Tak Suka:</td>
+        <td>
+          Keramaian karena aku ingin berduaan sama kamu,<br>
+          kebisingan karena nanti suara lucu mu gak kedengeran
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    // Musik akan diputar setelah pengguna klik di mana saja pada halaman
+    window.addEventListener('click', function () {
+      const musik = document.getElementById('musik');
+      musik.volume = 1;
+      musik.play();
+    }, { once: true });
+  </script>
+</body>
+</html>
